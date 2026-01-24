@@ -6,7 +6,7 @@ export async function GET(context: APIContext) {
   const posts = await getCollection('blog');
   return rss({
     title: 'Nibble Labs',
-    description: 'Small software experiments that solve real problems.',
+    description: 'Thoughts on DevOps, lean delivery, domain modelling, and software craft.',
     site: context.site!,
     items: posts
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
